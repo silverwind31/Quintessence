@@ -1,0 +1,133 @@
+.contacts{
+    display: flex;
+    align-items: center;
+    gap: 72px;
+    margin-bottom: 72px;
+    flex-wrap: wrap;
+    .phone, .mail{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-family: 'Futura PT';
+        font-weight: 500;
+        font-style: normal;
+        font-size: 64px;
+        line-height: 104%;
+        color: #252525;
+
+        img{
+            margin-right: 20px;
+
+            @media #{$mobile}{
+               width: 24px;
+               height: 24px;
+             }
+        }
+        @media #{$mobile}{
+            font-size: 32px;
+        }
+    }
+    .phone{
+        span{
+            font-family: 'Futura PT Book';
+            font-weight: 400;
+        }
+    }
+    
+    @media #{$tab}{
+        flex-direction: column;
+        gap: 40px;
+        align-items: flex-start;
+        margin-bottom: 64px;
+     }
+     @media #{$mobile}{
+        gap: 24px;
+        margin-bottom: 32px;
+     }
+}
+.location{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .location_title{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-family: 'Futura PT Book';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 104%;
+        color: #252525;
+
+        @media #{$mobile}{
+            font-size: 18px;
+        }
+        span{
+            @media #{$mobile}{
+                display: none;
+            } 
+        }
+        img{
+            @media #{$mobile}{
+                height: 30px;
+            }
+        }
+    }
+    .address{
+        padding-left: 60px;
+        font-family: 'Futura PT';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 104%;
+        letter-spacing: -0.02em;
+        color: #252525;
+
+        span{
+            font-family: 'Futura PT Book';
+            font-weight: 400;
+        }
+
+        @media #{$tab}{
+            font-size: 60px;
+        }
+        @media #{$mobile}{
+            padding-left: 0;
+            font-size: 32px;
+        }
+    }
+    @media #{$mobile}{
+        align-items: flex-start;
+        flex-direction: row;
+        margin-bottom: 32px;
+    }
+}
+.map{
+    iframe{
+        @media #{$tab}{
+            height: 494px;
+        }
+        @media #{$mobile}{
+            height: 260px;
+        }
+    }
+    @media #{$mobile}{
+        margin: 0 -16px;
+        margin-bottom: 72px;
+    }
+}
+
+// DARK MODE
+body.darkMode{
+    .contacts{
+        .phone, .mail{
+            color: #fff;
+        }
+    }
+    .location{
+        .location_title, .address{
+            color: #fff !important;
+        } 
+    }
+}

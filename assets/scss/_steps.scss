@@ -1,0 +1,371 @@
+.steps{
+    .section_title{
+        max-width: 100%;
+        margin-bottom: 150px;
+        span{
+            color: #7F7D7D;
+        }
+
+        @media #{$tab}{
+            max-width: 95%;
+            margin-bottom: 90px;
+        }
+        @media #{$mobile}{
+            max-width: 100%;
+            margin-bottom: 50px;
+        }
+    }
+    .path_pagination{
+       margin-bottom: 150px; 
+        .step_list{
+            display: flex;
+            align-items: center;
+
+            .step_list_item{
+                display: flex;
+                cursor: pointer;
+                .texts_row{
+                    position: relative;
+                    .texts{
+                        font-family: 'Futura PT';
+                        font-style: normal;
+                        font-size: 18px;
+                        line-height: 104%;
+                        color: #BABABA;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 6px;
+                        position: absolute;
+                        bottom: 28px;
+                        left: 0;
+    
+                        .title{
+                            width: 170px;
+                            font-weight: 500;   
+                            transition: .3s;
+                            
+                            @media #{$tab}{
+                                display: none;
+                              }
+                        }
+                        .description{
+                            font-family: 'Futura PT Book';
+                            font-style: italic;
+                            font-weight: 400;
+                            transition: .3s;
+                        }
+
+                        @media #{$mobile}{
+                            line-height: 104%;
+                            font-size: 14px;
+                            bottom: 20px;
+                            width: 38px;
+                        }
+                    }
+                }
+
+                &:nth-child(2n){
+                    flex-direction: column-reverse;
+                    svg{
+                        position: relative;
+                        top: 12px;
+
+                        @media #{$tab}{
+                            top: 5.5px;
+                        }
+                        @media #{$mobile}{
+                            top: 3px;
+                        }
+                    }
+                   .texts{
+                    top: 16px;
+                    
+                   }
+                }
+                &:nth-child(3){
+                    .texts{
+                        .title{
+                            width: 200px;
+                        }
+                    }
+                }
+                &:nth-child(6){
+                    .texts{
+                        .title{
+                            width: 200px;
+                        }
+                    }
+                }
+                &:nth-child(7){
+                    .texts{
+                        .title{
+                            width: 240px;
+                        }
+                    }
+                }
+                svg{
+                    width: 100%;
+                    
+                    & line{
+                        transition: .3s;
+                    }
+                    & ellipse{
+                        transition: .3s;
+                    }
+                    & path{
+                        transition: .3s;
+                    }
+                }
+                
+                &:hover{
+                    .texts{
+                        .title{
+                            color: #252525;
+                        }
+                        .description{
+                            color: #252525;
+                        }
+                    }
+                }
+                &.active{
+                    .texts{
+                        .title{
+                            color: #252525;
+                        }
+                        .description{
+                            color: #252525;
+                        }
+                    }
+                    svg{
+                        & line{
+                            stroke: #252525;
+                        }
+                        & ellipse{
+                            fill: #252525;
+                        }
+                        & path{
+                            stroke: #252525;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        @media #{$tab}{
+            margin-bottom: 90px;
+        }
+    }
+    .information_container{
+        overflow: hidden;
+    }
+    .swiper-wrapper{
+        .swiper-slide{
+            &:nth-child(4){
+                .slide_image{
+                    height: auto;
+
+                    img{
+                        height: auto;
+
+                        @media #{$tab}{
+                            height: 320px;
+                        }
+                    }
+                }
+            }
+        }
+        .slide_row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            ::-webkit-scrollbar {
+                width: 0;
+              }
+            .slide_action{
+                flex: 0 0 auto;
+                width: calc(46% - 36px);
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+
+                .title{
+                    font-family: 'Gilroy';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 134%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+
+                    .step_title{
+                        font-family: 'Futura PT';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 24px;
+                        line-height: 104%;
+                        color: #252525;
+                        display: none;
+
+                        @media #{$tab}{
+                            display: flex;
+                        }
+                    }
+                    @media #{$tab}{
+                        font-size: 18px;
+                    }
+                    @media #{$mobile}{
+                        font-size: 16px;
+                    }
+                }
+                @media #{$tab}{
+                    width: 100%;
+                }
+                @media #{$mobile}{
+                    gap: 32px;
+                }
+            }
+            .download_button{
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                gap: 16px;
+                font-family: 'Gilroy';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 124%;
+                color: #252525;
+
+                svg{
+                    @media #{$tab}{
+                        width: 44px;
+                        height: 44px;
+                    }
+                    @media #{$mobile}{
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+
+                @media #{$mobile}{
+                    font-size: 16px;
+                    line-height: 124%;
+                }
+            }
+            .slide_image{
+                flex: 0 0 auto;
+                width: calc(54% - 36px);
+                overflow: hidden;
+
+                img{
+                    object-fit: cover;
+                    object-position: center center;
+                    width: 100%;
+                    
+
+                    @media #{$tab}{
+                        height: 320px;
+                    }
+                }
+                @media #{$tab}{
+                    width: 100%;
+                    height: 320px;
+                }
+            }
+            @media #{$tab}{
+               flex-direction: column;
+               gap: 40px;
+            }
+        }
+    }
+}
+
+// DARKMODE
+body.darkMode{
+    .path_pagination{
+        .step_list_item{
+            display: flex;
+            cursor: pointer;
+            .texts_row{
+                .texts{
+                    color: #7F7D7D !important;
+                }
+            }
+            svg{
+                & line{
+                    stroke: #7F7D7D !important;
+                }
+                & ellipse{
+                    fill: #7F7D7D !important;
+                }
+                & path{
+                    stroke: #7F7D7D !important;
+                }
+            }
+           
+            &:hover{
+                .texts{
+                    .title{
+                        color: #fff !important;
+                    }
+                    .description{
+                        color: #fff !important;
+                    }
+                }
+            }
+            &.active{
+                .texts{
+                    .title{
+                        color: #fff !important;
+                    }
+                    .description{
+                        color: #fff !important; 
+                    }
+                }
+                svg{
+                    & line{
+                        stroke: #fff !important;
+                    }
+                    & ellipse{
+                        fill: #fff !important;
+                    }
+                    & path{
+                        stroke: #fff !important;
+                    }
+                }
+                
+            }
+        }
+    }
+    .slide_row{
+        .slide_action{
+            color: #fff !important;
+        }
+        .step_title{
+            color: #fff !important;
+        }
+        .download_button{
+            color: #fff !important;
+
+            svg path{
+                fill: #fff;
+            }
+        }        
+    }
+    .slide_nav{
+        .prev, .next{
+            &:hover{
+                svg{
+                    circle{
+                        fill: #fff;
+                    }
+                    & path{
+                       stroke: #252525;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Futura LT';
+    src: url('FuturaLT-CondensedOblique.eot');
+    src: local('Futura LT Condensed Medium Oblique'), local('FuturaLT-CondensedOblique'),
+        url('FuturaLT-CondensedOblique.eot?#iefix') format('embedded-opentype'),
+        url('FuturaLT-CondensedOblique.woff2') format('woff2'),
+        url('FuturaLT-CondensedOblique.woff') format('woff'),
+        url('FuturaLT-CondensedOblique.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Futura LT';
+    src: url('FuturaLT-BookOblique.eot');
+    src: local('Futura LT Book Oblique'), local('FuturaLT-BookOblique'),
+        url('FuturaLT-BookOblique.eot?#iefix') format('embedded-opentype'),
+        url('FuturaLT-BookOblique.woff2') format('woff2'),
+        url('FuturaLT-BookOblique.woff') format('woff'),
+        url('FuturaLT-BookOblique.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
